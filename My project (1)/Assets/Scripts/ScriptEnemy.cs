@@ -57,7 +57,7 @@ public class ScriptEnemy : MonoBehaviour
         PlayerController.instance.plF.killCount += 1;
         Instantiate(prefGraveStone, gameObject.transform.position, Quaternion.identity);
         int random = UnityEngine.Random.Range(0,100);
-        if(random <= 20)
+        if(random <= 50)
         {
             Instantiate(key, transform.position + new Vector3(-1f,1f,0), Quaternion.Euler(new Vector3(0f, 0f, 0f)));
         }

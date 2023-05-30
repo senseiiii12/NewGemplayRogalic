@@ -14,8 +14,7 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(RandomChest());
-        StartCoroutine(RandomEmemy());    
+           
     }
     public void choise1()
     {

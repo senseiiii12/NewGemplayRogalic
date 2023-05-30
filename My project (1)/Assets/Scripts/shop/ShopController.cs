@@ -9,7 +9,7 @@ public class ShopController : MonoBehaviour
     public List<Item> items = new List<Item>();
     public Transform ItemContent;
     public GameObject shopItem;
-    //public ItemController[] inventoryItems;
+    public GameObject panelShop;
     
 
     public void ListItems()

@@ -15,6 +15,7 @@ public class Rooms : MonoBehaviour
     public GameObject prefBoss;
     public GameObject enemy;
     public GameObject chest;
+    public GameObject shop;
 
     public List<GameObject> rooms;
 
@@ -23,6 +24,7 @@ public class Rooms : MonoBehaviour
     {
         Invoke("spawnBoss", 5);
         Invoke("spawnEnemy", 10);
+        Invoke("spawnShop", 12);
     }
     
 
@@ -42,6 +44,16 @@ public class Rooms : MonoBehaviour
                 Instantiate(enemy, rooms[i].transform.position + new Vector3(Random.Range(-18,18),Random.Range(-8,8),0), Quaternion.identity);
                 Instantiate(chest, rooms[i].transform.position + new Vector3(Random.Range(-18,18),Random.Range(-8,8),0), Quaternion.identity);
             }
+        }
+    }
+
+    public void spawnShop()
+    {
+        float countShop = rooms.Count / 2;
+        for (int i = 0; i < countShop; i++)
+        {
+            int rand = Random.Range(0, rooms.Count);
+            Instantiate(shop, rooms[rand].transform.position + new Vector3(Random.Range(-18, 18), Random.Range(-8, 8), 0), Quaternion.identity);
         }
     }
 }
