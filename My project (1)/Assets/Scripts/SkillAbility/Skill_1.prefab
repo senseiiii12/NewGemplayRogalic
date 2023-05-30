@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4985712785044556210}
   - component: {fileID: -4451238373281915130}
   - component: {fileID: -4938098136772658888}
-  - component: {fileID: -1432293557788244557}
+  - component: {fileID: -6746648526331725743}
   m_Layer: 0
   m_Name: Skill_1
   m_TagString: Untagged
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0.1, y: -0.61}
   serializedVersion: 2
   m_Radius: 0.74
---- !u!114 &-1432293557788244557
+--- !u!114 &-6746648526331725743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2567180294300579655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 281ef4652573ea44b92535f0108505dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 39ebab11046f9594a92627a716c41f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minDamage: 30
+  maxDamage: 50

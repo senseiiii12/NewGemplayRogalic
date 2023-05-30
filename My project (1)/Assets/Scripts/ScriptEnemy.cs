@@ -16,10 +16,7 @@ public class ScriptEnemy : MonoBehaviour
     GameObject player;
     public float force;
     public float cooldown;
-    public GameObject prefCoin;
     public GameObject prefGraveStone;
-    public GameObject prefBottle_heal;
-    public GameObject prefBottle_mana;
     public GameObject key;
     public GameObject XP;
 
@@ -32,7 +29,7 @@ public class ScriptEnemy : MonoBehaviour
     public Slider hBarEnemySlider;
 
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         enemyInstance = this;
@@ -40,7 +37,7 @@ public class ScriptEnemy : MonoBehaviour
         InvokeRepeating("enemyShooting", cooldown, cooldown);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         hBarEnemySlider.value = health;
@@ -60,7 +57,7 @@ public class ScriptEnemy : MonoBehaviour
         PlayerController.instance.plF.killCount += 1;
         Instantiate(prefGraveStone, gameObject.transform.position, Quaternion.identity);
         int random = UnityEngine.Random.Range(0,100);
-        if(random <= 5)
+        if(random <= 20)
         {
             Instantiate(key, transform.position + new Vector3(-1f,1f,0), Quaternion.Euler(new Vector3(0f, 0f, 0f)));
         }
@@ -74,8 +71,13 @@ public class ScriptEnemy : MonoBehaviour
         Vector2 mPosition = player.GetComponent<Transform>().position;
         Vector2 myPosition = transform.position;
         Vector2 direction = mPosition - myPosition;
-        spell.GetComponent<Rigidbody2D>().velocity = direction * force;
-        Destroy(spell, 3);
+        if( Vector2.Distance(mPosition,myPosition) < 25)
+        {
+            spell.GetComponent<Rigidbody2D>().velocity = direction * force;
+            Destroy(spell, 3);
+        }
+        
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
