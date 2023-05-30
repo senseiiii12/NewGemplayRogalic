@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 220c4afc213686b4ca17277a9514b8c0, type: 3}
+  m_Name: Player_1
+  m_EditorClassIdentifier: 
+  hp: 275
+  maxHp: 275
+  xp: 82
+  maxXp: 1200
+  mana: 100
+  maxMana: 100
+  maxDamage: 120
+  moveSpeed: 17
+  attackSpeed: 11
+  manaRegen: 5
+  manaCoast: 10
+  killCount: 16
+  skillPoint: 0
+  levelHero: 22
+  skin: {fileID: 735462567, guid: 0a937582ba2e9744799bf354ac67dc05, type: 3}
+  prefPlayer: {fileID: 7217394806960531006, guid: c001a2c71b6b6cb4287a4efb89e2c135, type: 3}
+  prefBullet: {fileID: 7842897859105786928, guid: 5e59dd19c5df0674ba848626a6d3f2cb, type: 3}
+  playerAnimator: {fileID: 0}
+  playerSpawnPoint: {fileID: 0}
+  bitCoins: 528
+  souls: 0
+  keys: 0
+  countAS: 3
+  countMS: 5
+  countD: 7
+  countMH: 7
