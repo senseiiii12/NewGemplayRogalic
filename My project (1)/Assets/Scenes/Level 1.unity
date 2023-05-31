@@ -6264,8 +6264,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6bbe992904d72ee488e726e32323e3e2, type: 2}
   - {fileID: 11400000, guid: e139eff63742cb94285c396b11fed884, type: 2}
   SkillContent: {fileID: 750522740}
-  SkillItem: {fileID: 8943132453168674514, guid: c1ba0fb5c1c11f845bda9ac76424707a, type: 3}
+  SkillItem: {fileID: 958574572887884593, guid: aa355d0f9a9b60748bc212b2e1651cca, type: 3}
   obj: {fileID: 0}
+  skillImages: []
 --- !u!4 &1275218300
 Transform:
   m_ObjectHideFlags: 0

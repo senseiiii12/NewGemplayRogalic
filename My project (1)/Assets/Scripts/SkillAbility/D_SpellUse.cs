@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class D_SpellUse : MonoBehaviour
 {
-    GameObject player;
-    int kd;
-    Image skillIcon;
+     GameObject player;
+    
     
     
 
@@ -29,21 +28,30 @@ public class D_SpellUse : MonoBehaviour
         {
             UseSkill(2);
         }
+
+        
     }
 
     private void FixedUpdate()
     {
-
-        //CoolDown(kd);
-
+        CoolDown();
     }
+
+
 
 
     public void UseSkill(int i)
     {
-        if(PlayerController.instance.plF.mana > 0 /*&& D_SpellController.d_instance.skillItems[i].IsCoolDown == false*/)
+        if(PlayerController.instance.plF.mana > 0 && D_SpellController.d_instance.skillItems[i].IsCoolDown == false)
         {
+
+
+            D_SpellController.d_instance.skillImages[i].fillAmount = 0;
+            D_SpellController.d_instance.skillItems[i].IsCoolDown = true;
+
+
             PlayerController.instance.plF.mana -= D_SpellController.d_instance.skillItems[i].ManaCoastSkill;
+
             GameObject spell = Instantiate(D_SpellController.d_instance.skillItems[i].prefabSkill, player.transform.position, Quaternion.identity);
             Vector2 mPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 myPosition = player.transform.position;
@@ -51,26 +59,23 @@ public class D_SpellUse : MonoBehaviour
             spell.GetComponent<Rigidbody2D>().velocity = direction * D_SpellController.d_instance.skillItems[i].forceSkill;
             Destroy(spell, 2);
 
-            //D_SpellController.d_instance.skillItems[i].IsCoolDown = true;
-
-            //skillIcon = D_SpellController.d_instance.obj.transform.Find("ImageSkill").GetComponent<Image>();
-            //skillIcon.sprite = D_SpellController.d_instance.skillItems[i].iconSkill;
-            //skillIcon.fillAmount = 0;
-
-            kd = i;
-            
         }   
     }
     
-    public void CoolDown(int i)
+    public void CoolDown()
     {
-        if (D_SpellController.d_instance.skillItems[i].IsCoolDown == true)
-        {
-            skillIcon.fillAmount += 1 / D_SpellController.d_instance.skillItems[i].kd * Time.deltaTime;
-            if (skillIcon.fillAmount == 1)
+        for (int j = 0; j < D_SpellController.d_instance.skillItems.Count; j++)
+        { 
+            if (D_SpellController.d_instance.skillItems[j].IsCoolDown == true)
             {
-                D_SpellController.d_instance.skillItems[i].IsCoolDown = false;
+                D_SpellController.d_instance.skillImages[j].fillAmount += 1 / D_SpellController.d_instance.skillItems[j].kd * Time.deltaTime;
+                if (D_SpellController.d_instance.skillImages[j].fillAmount == 1)
+                {
+                    D_SpellController.d_instance.skillItems[j].IsCoolDown = false;
+                }
             }
         }
     }
+
+
 }
