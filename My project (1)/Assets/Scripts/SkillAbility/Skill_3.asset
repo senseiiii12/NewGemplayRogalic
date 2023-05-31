@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   ManaCoastSkill: 20
-  damageSkill: 30
-  forceSkill: 1
+  damageSkill: 200
+  forceSkill: 0.5
   kd: 5
   IsCoolDown: 0
-  iconSkill: {fileID: 21300000, guid: 3757151fd001a864bb1f65f8f52f10e6, type: 3}
+  iconSkill: {fileID: 929557727, guid: b34fe1d666d33fc438a4b79870f72eba, type: 3}
   typeSkill: 0
-  prefabSkill: {fileID: 2567180294300579655, guid: 4168e2924d70f2946a0d571f54478ffb, type: 3}
+  prefabSkill: {fileID: 3742664005844841286, guid: 666998c9c5f78b74ba5bcbff690fb58c, type: 3}

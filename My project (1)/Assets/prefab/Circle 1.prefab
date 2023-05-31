@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8500499028941835955}
   - component: {fileID: 1852723795685437683}
   - component: {fileID: -5323122682903578120}
-  - component: {fileID: 7742123341753646711}
+  - component: {fileID: 9179494800498685596}
   - component: {fileID: 1334802131071182870}
   m_Layer: 0
   m_Name: Circle 1
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7842897859105786928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.2007494, y: 4.5592566, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a2d68081d156f704bb974b65c4ba11c6, type: 3}
+  m_Sprite: {fileID: 1225306030, guid: b34fe1d666d33fc438a4b79870f72eba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,7 +108,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &7742123341753646711
+--- !u!58 &9179494800498685596
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +123,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.039999995
 --- !u!114 &1334802131071182870
 MonoBehaviour:
   m_ObjectHideFlags: 0

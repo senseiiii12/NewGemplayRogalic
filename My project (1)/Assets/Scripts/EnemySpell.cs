@@ -12,18 +12,18 @@ public class EnemySpell : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 3);
-        stats = GameObject.FindAnyObjectByType<PlayerController>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        stats = GameObject.FindAnyObjectByType<PlayerController>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         int damage = Random.Range(minDamage, maxDamage);
-        PlayerMove player = collision.GetComponent<PlayerMove>();
+        PlayerController player = collision.GetComponent<PlayerController>();
         if (player != null)
         {
             stats.getDamage(damage);

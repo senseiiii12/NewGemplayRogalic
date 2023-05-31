@@ -16,6 +16,7 @@ public class Rooms : MonoBehaviour
     public GameObject enemy;
     public GameObject chest;
     public GameObject shop;
+    public GameObject fire;
 
     public List<GameObject> rooms;
 
@@ -25,6 +26,7 @@ public class Rooms : MonoBehaviour
         Invoke("spawnBoss", 5);
         Invoke("spawnEnemy", 10);
         Invoke("spawnShop", 12);
+        Invoke("spawnFireSkillUpgrade", 10);
     }
     
 
@@ -56,4 +58,18 @@ public class Rooms : MonoBehaviour
             Instantiate(shop, rooms[rand].transform.position + new Vector3(Random.Range(-18, 18), Random.Range(-8, 8), 0), Quaternion.identity);
         }
     }
+
+    public void spawnFireSkillUpgrade()
+    {
+        int rand = Random.Range(4, 8);
+        
+        for (int i = 0; i < rand; i++)
+        {
+            int rand_rooms = Random.Range(0, rooms.Count);
+            Instantiate(fire, rooms[rand_rooms].transform.position + new Vector3(-18, 8, 0), Quaternion.identity);
+        }
+    }
+
+
+
 }

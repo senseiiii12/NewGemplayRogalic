@@ -12,26 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220c4afc213686b4ca17277a9514b8c0, type: 3}
   m_Name: Player_2
   m_EditorClassIdentifier: 
-  hp: 72
+  hp: 200
   maxHp: 200
-  xp: 621
-  maxXp: 700
-  mana: 70
+  xp: 449
+  maxXp: 750
+  mana: 100
   maxMana: 200
   maxDamage: 20
   moveSpeed: 15
   attackSpeed: 5
   manaRegen: 10
   manaCoast: 20
-  killCount: 23
-  skillPoint: 2
-  levelHero: 12
+  killCount: 27
+  skillPoint: 3
+  levelHero: 13
   skin: {fileID: -234682551, guid: 69298d7b53c94db43a4ca8db710f3516, type: 3}
   prefPlayer: {fileID: 7217394806960531006, guid: d7ff0b1322a0a5c4f88b47885fd103a6, type: 3}
-  prefBullet: {fileID: 2567180294300579655, guid: 72cafa88efb407849997ab4bedfa805b, type: 3}
-  bitCoins: 710
+  prefBullet: {fileID: 7776185360407125344, guid: 94a7b5e3c5185fe4fb62aa1a74e8bcf6, type: 3}
+  bitCoins: 798
   souls: 0
-  keys: 0
+  keys: 1
   countAS: 0
   countMS: 10
   countD: 0
