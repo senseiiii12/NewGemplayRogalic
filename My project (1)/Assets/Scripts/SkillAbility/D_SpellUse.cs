@@ -6,13 +6,10 @@ using UnityEngine.UI;
 public class D_SpellUse : MonoBehaviour
 {
      GameObject player;
-    
-    
-    
-
     private void Start()
-    {   
-        player = GameObject.FindGameObjectWithTag("Player");
+    {
+        
+
     }
     void Update()
     {
@@ -29,7 +26,7 @@ public class D_SpellUse : MonoBehaviour
             UseSkill(2);
         }
 
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void FixedUpdate()

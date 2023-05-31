@@ -725,7 +725,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plF: {fileID: 11400000, guid: fce2f46752ec96a469a020b642b85eb2, type: 2}
-  hBarPlayerSlider: {fileID: 0}
-  sliderMana: {fileID: 0}
-  sliderXP: {fileID: 0}
   player: {fileID: 7217394806960531006}

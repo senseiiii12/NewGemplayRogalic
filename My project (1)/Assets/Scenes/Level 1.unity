@@ -349,6 +349,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2783141004736995000, guid: eb30d8ec4b847c94a9d843a3a42b077b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2783141004736995001, guid: eb30d8ec4b847c94a9d843a3a42b077b, type: 3}
       propertyPath: m_Name
       value: StartRoom
