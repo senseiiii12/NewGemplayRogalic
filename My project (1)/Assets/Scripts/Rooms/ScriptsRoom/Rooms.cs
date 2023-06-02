@@ -20,13 +20,16 @@ public class Rooms : MonoBehaviour
 
     public List<GameObject> rooms;
 
-    
     private void Start()
     {
+
+
         Invoke("spawnBoss", 5);
         Invoke("spawnEnemy", 10);
         Invoke("spawnShop", 12);
-        Invoke("spawnFireSkillUpgrade", 10);
+        Invoke("spawnFire", 15);
+
+
     }
     
 
@@ -47,6 +50,8 @@ public class Rooms : MonoBehaviour
                 Instantiate(chest, rooms[i].transform.position + new Vector3(Random.Range(-18,18),Random.Range(-8,8),0), Quaternion.identity);
             }
         }
+
+
     }
 
     public void spawnShop()
@@ -59,14 +64,15 @@ public class Rooms : MonoBehaviour
         }
     }
 
-    public void spawnFireSkillUpgrade()
+    public void spawnFire()
     {
-        int rand = Random.Range(4, 8);
-        
-        for (int i = 0; i < rand; i++)
+        int rand_itr = Random.Range(1, 5);
+        for (int i = 0; i < rand_itr ; i++)
         {
-            int rand_rooms = Random.Range(0, rooms.Count);
-            Instantiate(fire, rooms[rand_rooms].transform.position + new Vector3(-18, 8, 0), Quaternion.identity);
+            int rand_rooms = Random.Range(3, rooms.Count);
+            int rand_x = Random.Range(-16,16);
+            int rand_y = Random.Range(-8,8);
+            Instantiate(fire, rooms[rand_rooms].transform.position + new Vector3(rand_x, rand_y, 0), Quaternion.identity);
         }
     }
 

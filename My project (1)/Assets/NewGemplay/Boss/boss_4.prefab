@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: -375683446867654206}
   m_Layer: 0
   m_Name: boss_4
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,11 +691,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90031a44696f168428c3ba630f5cebe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5000
+  health: 2500
   sheild: 1000
   prefbullet: {fileID: 2567180294300579655, guid: d1789b1690983d94c857ce65ae95e7de, type: 3}
-  force: 4
-  cooldown: 3
+  force: 2
+  cooldown: 1
   XP: {fileID: 513560722825623728, guid: fc0364bdec1b0db4e9e5accb77418fe6, type: 3}
   minDamage: 30
   maxDamage: 50

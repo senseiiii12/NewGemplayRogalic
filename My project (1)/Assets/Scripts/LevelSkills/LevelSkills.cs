@@ -23,26 +23,13 @@ public class LevelSkills : MonoBehaviour
     {
         lvlskill = this;    
     }
-
     void Update()
-    {      
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (!levelSkillPanel.activeSelf)
-            {
-                levelSkillPanel.SetActive(true);             
-            }
-            else
-            {
-                levelSkillPanel.SetActive(false);  
-            }
-        }
+    {
         sliderAS.value = PlayerController.instance.plF.countAS;
         sliderMS.value = PlayerController.instance.plF.countMS;
         sliderD.value = PlayerController.instance.plF.countD;
         sliderMH.value = PlayerController.instance.plF.countMH;
     }
-
 
     public void UpSkillAS()
     {

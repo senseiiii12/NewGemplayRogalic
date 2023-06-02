@@ -21,11 +21,13 @@ public class bossScript : MonoBehaviour
     public Slider hBarEnemySlider;
     public GameObject canvasSheild;
     public Slider sheildbar;
+    bool isSheild = false;
 
 
 
     void Start()
     {
+        
         hBarEnemySlider.maxValue = health;
         sheildbar.maxValue = sheild;
         InvokeRepeating("enemyShooting", cooldown, cooldown);
@@ -36,22 +38,26 @@ public class bossScript : MonoBehaviour
     {
         hBarEnemySlider.value = health;
         sheildbar.value = sheild;
-        player = GameObject.FindGameObjectWithTag("Player");
-
-        if (health < health * 0.75)
-        {
-            canvasSheild.SetActive(true);
-        }
-
-
+        player = GameObject.FindGameObjectWithTag("Player");  
     }
+
     public void TakeDamage(int damage)
     {
-        canvasHp.SetActive(true);
+        if(health < 2000 && sheild > 0)
+        {
+            isSheild = true;
+            canvasSheild.SetActive(true);
+            cooldown = 1;
+        }
+        else
+        {
+            isSheild = false;
+        }
 
-        if(sheildbar.IsActive()){
+        if (sheildbar.isActiveAndEnabled)
+        {
             sheild -= damage; 
-            if(sheild <= 0) {
+            if(!isSheild) {
                 canvasSheild.SetActive(false);
             }
         }
@@ -63,7 +69,6 @@ public class bossScript : MonoBehaviour
                 Die();
             }
         }
-        
     }
 
     private void Die()
@@ -82,7 +87,7 @@ public class bossScript : MonoBehaviour
         if (Vector2.Distance(mPosition, myPosition) < 25)
         {
             spell.GetComponent<Rigidbody2D>().velocity = direction * force;
-            Destroy(spell, 3);
+            Destroy(spell, 8);
         }
 
 
@@ -91,17 +96,16 @@ public class bossScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         int damage = Random.Range(minDamage, maxDamage);
-        PlayerMove player = collision.GetComponent<PlayerMove>();
+        PlayerController player = collision.GetComponent<PlayerController>();
         if (player != null)
         {
             PlayerController.instance.getDamage(damage);
         }
     }
 
-
     public void CreateXP()
     {
-        int random = Random.Range(10, 30);
+        int random = Random.Range(20, 30);
         for (int i = 0; i < random; i++)
         {
             Vector3 point = (Random.insideUnitSphere * 2) + transform.position;

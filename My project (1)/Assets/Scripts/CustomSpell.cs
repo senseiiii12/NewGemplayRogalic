@@ -22,11 +22,17 @@ public class CustomSpell : MonoBehaviour
     {
         int damage = Random.Range(PlayerController.instance.plF.maxDamage - (PlayerController.instance.plF.maxDamage / 2), PlayerController.instance.plF.maxDamage);
         ScriptEnemy enemy = collision.GetComponent<ScriptEnemy>();
+        bossScript boss = collision.GetComponent<bossScript>();
         if (collision.tag == "Enemy")
         {
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         }
+        else if(collision.tag == "Boss") {
+            boss.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+       
        
     }
 }

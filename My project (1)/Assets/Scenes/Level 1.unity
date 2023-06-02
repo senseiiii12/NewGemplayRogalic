@@ -1529,6 +1529,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: boss_4
       objectReference: {fileID: 0}
+    - target: {fileID: 4139517041892642018, guid: 810504c04c1eaac4ebaaf75604dd8375, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435489093905354668, guid: 810504c04c1eaac4ebaaf75604dd8375, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630356286796622411, guid: 810504c04c1eaac4ebaaf75604dd8375, type: 3}
+      propertyPath: force
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630356286796622411, guid: 810504c04c1eaac4ebaaf75604dd8375, type: 3}
+      propertyPath: canvasSheild
+      value: 
+      objectReference: {fileID: 1133462645}
     - target: {fileID: 7601871152257338015, guid: 810504c04c1eaac4ebaaf75604dd8375, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5808,6 +5824,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121613416}
   m_CullTransparentMesh: 1
+--- !u!1 &1133462645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4139517041892642018, guid: 810504c04c1eaac4ebaaf75604dd8375, type: 3}
+  m_PrefabInstance: {fileID: 192484145}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1137226666
 GameObject:
   m_ObjectHideFlags: 0
@@ -8912,7 +8933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5bf2d7d90c8baf4aa212350f174fa0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSkillPanel: {fileID: 1746923201}
 --- !u!1 &2018018652
 GameObject:
   m_ObjectHideFlags: 0

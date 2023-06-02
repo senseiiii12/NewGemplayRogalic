@@ -16,6 +16,7 @@ public class PlayerStats : MonoBehaviour
     {
            
     }
+
     public void choise1()
     {
         Instantiate(pl_chois[0].prefPlayer, new Vector3(Random.Range(-18, 18), Random.Range(-8, 8), 0), transform.rotation);
@@ -26,9 +27,6 @@ public class PlayerStats : MonoBehaviour
         Instantiate(pl_chois[1].prefPlayer, new Vector3(Random.Range(-18, 18), Random.Range(-8, 8), 0), transform.rotation);
         panel_choise_player.SetActive(false);
     }
-
-
-
 
     public void CreateRandomEnemy()
     {
