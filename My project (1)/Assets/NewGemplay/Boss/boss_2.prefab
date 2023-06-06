@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.76640606, a: 1}
+  m_Color: {r: 0.40420914, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -580,11 +580,11 @@ GameObject:
   - component: {fileID: 3277444250449833881}
   - component: {fileID: 3277444250449833882}
   - component: {fileID: 2075034625665226291}
-  - component: {fileID: 6630356286796622411}
   - component: {fileID: -375683446867654206}
+  - component: {fileID: 7022522620636940026}
   m_Layer: 0
-  m_Name: boss_4
-  m_TagString: Boss
+  m_Name: boss_2
+  m_TagString: Boss 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -647,7 +647,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 737335521, guid: 719f755418d8bcf43bba7e6903b9fd92, type: 3}
+  m_Sprite: {fileID: -1445010033, guid: 719f755418d8bcf43bba7e6903b9fd92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -668,7 +668,7 @@ Animator:
   m_GameObject: {fileID: 3277444250449833884}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 257c518f806dcc7478cc438e6945707f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 995f4f8117fa903448be4134cc051ece, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -679,31 +679,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6630356286796622411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3277444250449833884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90031a44696f168428c3ba630f5cebe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 2500
-  sheild: 1000
-  prefbullet: {fileID: 2567180294300579655, guid: d1789b1690983d94c857ce65ae95e7de, type: 3}
-  force: 2
-  cooldown: 1
-  XP: {fileID: 513560722825623728, guid: fc0364bdec1b0db4e9e5accb77418fe6, type: 3}
-  portal: {fileID: 8972136228627438201, guid: ccb6078ee7cc1e745be7b0644edc9545, type: 3}
-  minDamage: 30
-  maxDamage: 50
-  canvasHp: {fileID: 2631690285186626000}
-  hBarEnemySlider: {fileID: 2631690283558805514}
-  canvasSheild: {fileID: 4435489093905354668}
-  sheildbar: {fileID: 2618657555326846872}
 --- !u!58 &-375683446867654206
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -720,6 +695,32 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.48
+--- !u!114 &7022522620636940026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277444250449833884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945865cb5d241ce4f97c5be4608a9fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3000
+  sheild: 4000
+  prefbullet: {fileID: 2567180294300579655, guid: 02598fdd15c47814599730aab309df99, type: 3}
+  force: 3
+  cooldown: 3
+  XP: {fileID: 513560722825623728, guid: fc0364bdec1b0db4e9e5accb77418fe6, type: 3}
+  portal: {fileID: 0}
+  bullet360: {fileID: 2567180294300579655, guid: 02598fdd15c47814599730aab309df99, type: 3}
+  minDamage: 50
+  maxDamage: 100
+  canvasHp: {fileID: 2631690285186626000}
+  hBarEnemySlider: {fileID: 2631690283558805514}
+  canvasSheild: {fileID: 4435489093905354668}
+  sheildbar: {fileID: 2618657555326846872}
 --- !u!1 &4139517041892642018
 GameObject:
   m_ObjectHideFlags: 0

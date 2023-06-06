@@ -33,13 +33,14 @@ public class ScriptEnemy : MonoBehaviour
     void Start()
     {
         enemyInstance = this;
-        player = GameObject.FindGameObjectWithTag("Player");
+       
         InvokeRepeating("enemyShooting", cooldown, cooldown);
     }
 
     
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         hBarEnemySlider.value = health;
     }
     public void TakeDamage(int damage)

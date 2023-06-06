@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class bossScript : MonoBehaviour
+public class bossScript_2 : MonoBehaviour
 {
-    
     public int health;
     public int sheild;
     public GameObject prefbullet;
@@ -14,6 +13,7 @@ public class bossScript : MonoBehaviour
     public float cooldown;
     public GameObject XP;
     public GameObject portal;
+    public GameObject bullet360;
 
 
     public int minDamage;
@@ -29,7 +29,7 @@ public class bossScript : MonoBehaviour
 
     void Start()
     {
-        
+
         hBarEnemySlider.maxValue = health;
         sheildbar.maxValue = sheild;
         InvokeRepeating("enemyShooting", cooldown, cooldown);
@@ -38,18 +38,19 @@ public class bossScript : MonoBehaviour
 
     void Update()
     {
+        
         hBarEnemySlider.value = health;
         sheildbar.value = sheild;
-        player = GameObject.FindGameObjectWithTag("Player");  
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void TakeDamage(int damage)
     {
-        if(health < 2000 && sheild > 0)
+        if (health < 2000 && sheild > 0)
         {
             isSheild = true;
             canvasSheild.SetActive(true);
-            cooldown = 1;
+            bullet_360();
         }
         else
         {
@@ -58,8 +59,9 @@ public class bossScript : MonoBehaviour
 
         if (sheildbar.isActiveAndEnabled)
         {
-            sheild -= damage; 
-            if(!isSheild) {
+            sheild -= damage;
+            if (!isSheild)
+            {
                 canvasSheild.SetActive(false);
             }
         }
@@ -77,7 +79,6 @@ public class bossScript : MonoBehaviour
     {
         PlayerController.instance.plF.killCount += 1;
         CreateXP();
-        Instantiate(portal, transform.position + new Vector3(Random.Range(-15,15),Random.Range(-10,10),0), Quaternion.identity);
         Destroy(gameObject);
     }
 
@@ -114,5 +115,14 @@ public class bossScript : MonoBehaviour
         }
     }
 
-
+    public void bullet_360()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject spawnedObject = Instantiate(bullet360, transform.position, Quaternion.identity);
+            Vector2 randomDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+            spawnedObject.GetComponent<Rigidbody2D>().velocity = randomDirection * 7;
+            Destroy(spawnedObject, 8);
+        }
+    }
 }
