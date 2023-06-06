@@ -16,8 +16,8 @@ MonoBehaviour:
   ManaCoastSkill: 70
   damageSkill: 1000
   forceSkill: 2
-  kd: 10
-  IsCoolDown: 1
+  kd: 4
+  IsCoolDown: 0
   iconSkill: {fileID: 1389618951, guid: 2af2b77d7aa37c34ab1852af15e94731, type: 3}
   typeSkill: 0
   prefabSkill: {fileID: 3742664005844841286, guid: 72bf3516906b8d142a448dba5ac42fa2, type: 3}

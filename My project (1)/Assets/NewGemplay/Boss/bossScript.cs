@@ -26,7 +26,8 @@ public class bossScript : MonoBehaviour
     bool isSheild = false;
 
 
-
+    int[] mass_X = { -15, 15 };
+    int[] mass_Y = { -10, 10 };
     void Start()
     {
         
@@ -38,6 +39,10 @@ public class bossScript : MonoBehaviour
 
     void Update()
     {
+        if (isSheild)
+        {
+            cooldown = 1/10;
+        }
         hBarEnemySlider.value = health;
         sheildbar.value = sheild;
         player = GameObject.FindGameObjectWithTag("Player");  
@@ -49,7 +54,6 @@ public class bossScript : MonoBehaviour
         {
             isSheild = true;
             canvasSheild.SetActive(true);
-            cooldown = 1;
         }
         else
         {
@@ -72,23 +76,24 @@ public class bossScript : MonoBehaviour
             }
         }
     }
-
+    
     private void Die()
     {
+        int rand_i = Random.Range(0, 2);
         PlayerController.instance.plF.killCount += 1;
         CreateXP();
-        Instantiate(portal, transform.position + new Vector3(Random.Range(-15,15),Random.Range(-10,10),0), Quaternion.identity);
+        Instantiate(portal, transform.position + new Vector3(mass_X[rand_i], mass_Y[rand_i],0), Quaternion.identity);
         Destroy(gameObject);
     }
 
     void enemyShooting()
     {
-        GameObject spell = Instantiate(prefbullet, transform.position, Quaternion.identity);
         Vector2 mPosition = player.GetComponent<Transform>().position;
         Vector2 myPosition = transform.position;
-        Vector2 direction = mPosition - myPosition;
         if (Vector2.Distance(mPosition, myPosition) < 25)
         {
+            GameObject spell = Instantiate(prefbullet, transform.position, Quaternion.identity);
+            Vector2 direction = mPosition - myPosition;
             spell.GetComponent<Rigidbody2D>().velocity = direction * force;
             Destroy(spell, 8);
         }

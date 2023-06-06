@@ -54,7 +54,7 @@ public class D_SpellUse : MonoBehaviour
             Vector2 myPosition = player.transform.position;
             Vector2 direction = mPosition - myPosition;
             spell.GetComponent<Rigidbody2D>().velocity = direction * D_SpellController.d_instance.skillItems[i].forceSkill;
-            Destroy(spell, 2);
+            Destroy(spell, 10);
 
         }   
     }

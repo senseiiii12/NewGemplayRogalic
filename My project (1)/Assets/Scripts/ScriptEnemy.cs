@@ -68,12 +68,12 @@ public class ScriptEnemy : MonoBehaviour
 
     void enemyShooting()
     {
-        GameObject spell = Instantiate(pref, transform.position, Quaternion.identity);
         Vector2 mPosition = player.GetComponent<Transform>().position;
         Vector2 myPosition = transform.position;
-        Vector2 direction = mPosition - myPosition;
-        if( Vector2.Distance(mPosition,myPosition) < 25)
+        if (Vector2.Distance(mPosition, myPosition) < 25)
         {
+            GameObject spell = Instantiate(pref, transform.position, Quaternion.identity);
+            Vector2 direction = mPosition - myPosition;
             spell.GetComponent<Rigidbody2D>().velocity = direction * force;
             Destroy(spell, 3);
         }

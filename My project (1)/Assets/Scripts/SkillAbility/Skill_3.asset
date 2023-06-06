@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   ManaCoastSkill: 20
-  damageSkill: 200
+  damageSkill: 1000
   forceSkill: 0.5
-  kd: 5
+  kd: 6
   IsCoolDown: 0
   iconSkill: {fileID: 929557727, guid: b34fe1d666d33fc438a4b79870f72eba, type: 3}
   typeSkill: 0
