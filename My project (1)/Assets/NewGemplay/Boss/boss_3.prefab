@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.40420914, g: 0, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.25845075, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -583,7 +583,7 @@ GameObject:
   - component: {fileID: -375683446867654206}
   - component: {fileID: 7022522620636940026}
   m_Layer: 0
-  m_Name: boss_2
+  m_Name: boss_3
   m_TagString: Boss 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,7 +647,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1445010033, guid: 719f755418d8bcf43bba7e6903b9fd92, type: 3}
+  m_Sprite: {fileID: -619464633, guid: 719f755418d8bcf43bba7e6903b9fd92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -668,7 +668,7 @@ Animator:
   m_GameObject: {fileID: 3277444250449833884}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 995f4f8117fa903448be4134cc051ece, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7c13f862d42393146bf3edb220693008, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -707,14 +707,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945865cb5d241ce4f97c5be4608a9fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3000
+  health: 5000
   sheild: 4000
-  prefbullet: {fileID: 2567180294300579655, guid: 02598fdd15c47814599730aab309df99, type: 3}
+  prefbullet: {fileID: 2567180294300579655, guid: a20755dfb1fb246408a4fab80fc969d5, type: 3}
   force: 2
   cooldown: 2
   XP: {fileID: 513560722825623728, guid: fc0364bdec1b0db4e9e5accb77418fe6, type: 3}
-  portal: {fileID: 8972136228627438201, guid: b4604a540af024d43baf6d137cef3bc7, type: 3}
-  bullet360: {fileID: 2567180294300579655, guid: 02598fdd15c47814599730aab309df99, type: 3}
+  portal: {fileID: 8972136228627438201, guid: ab3205727ffacd740ba9a17920bca88f, type: 3}
+  bullet360: {fileID: 2567180294300579655, guid: a20755dfb1fb246408a4fab80fc969d5, type: 3}
   minDamage: 50
   maxDamage: 100
   canvasHp: {fileID: 2631690285186626000}

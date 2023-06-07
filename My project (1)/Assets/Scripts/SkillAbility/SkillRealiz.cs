@@ -5,7 +5,7 @@ using UnityEngine;
 public class SkillRealiz : MonoBehaviour
 {
     public int numberSkill;
-    int hit = 0;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ScriptEnemy enemy = collision.GetComponent<ScriptEnemy>();
@@ -27,10 +27,18 @@ public class SkillRealiz : MonoBehaviour
             Destroy(gameObject, 10);
         }
         
-        if((enemy != null) || (collision.tag == "Boss") ||(collision.tag == "Boss 2"))
+        if(enemy != null)
         {
             enemy.TakeDamage(D_SpellController.d_instance.skillItems[numberSkill].damageSkill);
+            Destroy(gameObject);
+        }
+        else if (collision.tag == "Boss")
+        {
             boss.TakeDamage(D_SpellController.d_instance.skillItems[numberSkill].damageSkill);
+            Destroy(gameObject);
+        }
+        else
+        {
             boss_2.TakeDamage(D_SpellController.d_instance.skillItems[numberSkill].damageSkill);
             Destroy(gameObject);
         }

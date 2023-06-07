@@ -25,7 +25,8 @@ public class bossScript_2 : MonoBehaviour
     public Slider sheildbar;
     bool isSheild = false;
 
-
+    int[] mass_X = { -15, 15 };
+    int[] mass_Y = { -10, 10 };
 
     void Start()
     {
@@ -77,8 +78,10 @@ public class bossScript_2 : MonoBehaviour
 
     private void Die()
     {
+        int rand_i = Random.Range(0, 2);
         PlayerController.instance.plF.killCount += 1;
         CreateXP();
+        Instantiate(portal, transform.position + new Vector3(mass_X[rand_i], mass_Y[rand_i], 0), Quaternion.identity);
         Destroy(gameObject);
     }
 
