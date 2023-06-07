@@ -24,6 +24,7 @@ public class CustomSpell : MonoBehaviour
         ScriptEnemy enemy = collision.GetComponent<ScriptEnemy>();
         bossScript boss = collision.GetComponent<bossScript>();
         bossScript_2 boss_2 = collision.GetComponent<bossScript_2>();
+        bossScript_3 boss_3 = collision.GetComponent<bossScript_3>();
         if (collision.tag == "Enemy")
         {
             enemy.TakeDamage(damage);
@@ -36,6 +37,11 @@ public class CustomSpell : MonoBehaviour
         else if (collision.tag == "Boss 2")
         {
             boss_2.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+        else if (collision.tag == "Boss 3")
+        {
+            boss_3.TakeDamage(damage);
             Destroy(gameObject);
         }
 

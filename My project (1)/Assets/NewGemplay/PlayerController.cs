@@ -28,8 +28,8 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         rigidbody2D = GetComponent<Rigidbody2D>();
 
-        
 
+        plF.moveSpeed = plF.countMS + 10;
         PlayerUI.plUI.iconPlayer.sprite = plF.skin;
         PlayerUI.plUI.hp_slider.maxValue = plF.maxHp;
         PlayerUI.plUI.xp_slider.maxValue = plF.maxXp;
